@@ -1,28 +1,25 @@
-class ProductDataModel{
-  int? id;
-  String? name;
-  String? category;
+class ProductDataModel {
+  String? description;
   String? imageURL;
-  String? oldPrice;
   String? price;
+  String? rating;
+  String? name;
+  String? productUrl;
 
   ProductDataModel(
-      {
-        this.id,
-      this.name,
-      this.category,
+      {this.description,
       this.imageURL,
-      this.oldPrice,
-      this.price
-      });
+      this.price,
+      this.rating,
+      this.name,
+      this.productUrl});
 
-  ProductDataModel.fromJson(Map<String,dynamic> json)
-  {
-    id = json['id'];
-    name =json['name'];
-    category = json['category'];
-    imageURL = json['imageUrl'];
-    oldPrice = json['oldPrice'];
+  ProductDataModel.fromJson(Map<String, dynamic> json) {
+    description = json['description'];
+    imageURL = json['image'];
     price = json['price'];
+    rating = json['rating'];
+    name = json['name'];
+    productUrl = json['url'];
   }
 }
